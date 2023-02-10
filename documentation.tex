@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{parskip}    % skip line
+
+\usepackage{lpi}
+
+% Se scritta in italiano:
+\usepackage[italian]{babel}
+
+
+\title{%
+    Template Progetto \\
+    \phantom{} \\
+    \large Scuola d'Arti e Mestieri di Trevano (SAMT) \\
+    \large Documentazione
+}
+
+\author{Mario Rossi}
+
+\date{}
+
+\lpisetup%
+    {Nome Progetto}
+	% prossimi update avranno altri argumenti qui
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+
+\tableofcontents
+
+\pagebreak
+
+\section{Introduction}
+
+Ciao
+
+\section{Requirements}
+
+\requirement{00}{CLI tool}{1}{1.0}{none}{
+    A CLI tool to execute background removal must be developed
+}{
+    \subreq{00}{0}{The target image must be specified}
+    \subreq{00}{1}{The trimap image must be specified}
+    \subreq{00}{1}{The program can save the generated background mask}
+    \subreq{00}{1}{The program can remove the background and insert an image}
+    \subreq{00}{1}{The program can remove the background and fill it with a color}
+    \subreq{00}{1}{The program can remove the background and leave it transparent}
+}
+
+\requirement{01}{Image formats}{1}{1.0}{none}{
+    Multiple image formats must be supported
+}{
+    \subreq{00}{0}{The JPG format must be supported}
+    \subreq{00}{1}{The PNG format must be supported}
+    \subreq{00}{2}{The WebP format must be supported}
+}
+
+\requirement{02}{Size check}{1}{1.0}{none}{
+    The executable must assert that the target image and trimap are of the same size
+}{
+}
+
+\requirement{03}{GUI}{1}{1.0}{none}{
+    A GUI application must be developed in other to interact with the program features
+}{
+}
+
+\pagebreak
+
+\section{Conclusion}
+
+\pagebreak
+
+\listoffigures
+
+\end{document}
