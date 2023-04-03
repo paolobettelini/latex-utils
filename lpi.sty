@@ -13,6 +13,7 @@
 \RequirePackage{listings}
 \RequirePackage{glossaries}
 \RequirePackage{graphicx}
+\RequirePackage{tikz}
 
 \RequirePackage{tabularx}
 
@@ -67,6 +68,20 @@
         }
         \WFclear
     \fi
+}
+
+\newcommand{\checkmark}{}%
+\DeclareRobustCommand{\checkmark}{%
+  \tikz\fill[scale=0.4, color=green]
+  (0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;%
+}
+
+\newcommand{\notcheckmark}{}%
+\DeclareRobustCommand{\notcheckmark}{%
+\begin{tikzpicture}[scale=0.4, color=red]
+  \fill (0,.15) -- (0.85,1) -- (1,0.85) -- (.15,0) -- cycle;%
+  \fill (1,.15) -- (0.85,0) -- (0,0.85) -- (.15,1) -- cycle;%
+\end{tikzpicture}
 }
 
 % requirements
