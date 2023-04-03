@@ -14,12 +14,14 @@
 \RequirePackage{glossaries}
 \RequirePackage{graphicx}
 
+\RequirePackage{tabularx}
+
 \newcommand{\lpisetup}[1]{
     \geometry{
-    a4paper,
-    bottom=3cm,
-    headheight=4cm,
-    top=2cm
+        a4paper,
+        bottom=3cm,
+        headheight=4cm,
+        top=2cm
     }
 
     \hypersetup{
@@ -110,22 +112,20 @@
     \bgroup{}
     \def\arraystretch{1.25}
     \begin{center}
-        \begin{tabular}{ |l|p{9cm}| }
+        \begin{tabularx}{\textwidth}{ |l|X| }
             \hline
-            \multicolumn{2}{|c|}{\textbf{Test-#1}} \\
-            \hline
-            \textbf{Name} & #2 \\
+            \multicolumn{2}{|c|}{\textbf{Test-#1 | #2}} \\
             \hline
             \textbf{Reference} & #3 \\
             \hline
-            \textbf{Prerequisites} & #4 \\
-            \hline
-            \textbf{Description} &
+            \textbf{Steps} &
             \begin{enumerate}
-                #5
+                #4
             \end{enumerate} \\
             \hline
-        \end{tabular}
+            \textbf{Result} & #5 \\
+            \hline
+        \end{tabularx}
     \end{center}
     \egroup{}
 }
@@ -135,6 +135,7 @@
 \lstdefinestyle{boxed} {
     basicstyle=\ttfamily,
     numbers=none,
+    breaklines=true,
     frame=lines,
     backgroundcolor=\color[gray]{0.97}
 }
