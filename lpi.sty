@@ -155,6 +155,22 @@
     backgroundcolor=\color[gray]{0.97}
 }
 
+\definecolor{dkgreen}{rgb}{0,.6,0}
+\definecolor{dkblue}{rgb}{0,0,.6}
+\definecolor{dkyellow}{cmyk}{0,0,.8,.3}
+
+\lstdefinestyle{php} {
+    language=php,
+    keywordstyle    = \color{dkgreen},
+    stringstyle     = \color{red},
+    identifierstyle = \color{dkblue},
+    commentstyle    = \color{gray},
+    emph            =[1]{php},
+    emphstyle       =[1]\color{black},
+    emph            =[2]{if,and,or,else},
+    emphstyle       =[2]\color{dkyellow}
+}
+
 \lstdefinelanguage{Rust}{
     sensitive,
     morecomment=[l]{//},
